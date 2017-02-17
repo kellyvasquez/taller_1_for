@@ -1,6 +1,8 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <math.h>
+#include <cmath>
 using namespace std;
 
 int main ()
@@ -37,7 +39,23 @@ int main ()
         case 2:
             system ("cls");
             cout<<"ARRAY DE NUM1 x NUM2, MOSTRAR EN CEROS Y UNOS.\n";
+                    
+				int n1, n2;
+                cout<<"Ingrese numero de filas: ";cin>>n1;
+                cout<<"Ingrese numero de columnas: ";cin>>n2;
 
+                int matriz[n1][n2];
+                int k;
+                k=1;
+                for(int i=0; i<n1; i++){
+                   for(int j=0; j<n2; j++){
+                    matriz[i][j]=k;   }
+                  	k=0;
+                }
+	                for(int i=0;i<n1;i++)
+   	                {   for(int j=0;j<n2;j++){
+					   		cout<<matriz[i][j]<<" ";   }cout<<endl;
+                    }
 
             getch;
             break;
