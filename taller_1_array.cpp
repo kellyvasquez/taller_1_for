@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <iostream>
 #include <math.h>
-#include <cmath>
 using namespace std;
 
 int main ()
@@ -39,7 +38,7 @@ int main ()
         case 2:
             system ("cls");
             cout<<"ARRAY DE NUM1 x NUM2, MOSTRAR EN CEROS Y UNOS.\n";
-                    
+
 				int n1, n2;
                 cout<<"Ingrese numero de filas: ";cin>>n1;
                 cout<<"Ingrese numero de columnas: ";cin>>n2;
@@ -47,23 +46,39 @@ int main ()
                 int matriz[n1][n2];
                 int k;
                 k=1;
-                for(int i=0; i<n1; i++){
-                   for(int j=0; j<n2; j++){
+                for(int i=0; i<n1; i++)
+                { for(int j=0; j<n2; j++){
                     matriz[i][j]=k;   }
-                  	k=0;
-                }
-	                for(int i=0;i<n1;i++)
-   	                {   for(int j=0;j<n2;j++){
-					   		cout<<matriz[i][j]<<" ";   }cout<<endl;
-                    }
-
+                  	k=0;}
+                for(int i=0;i<n1;i++)
+                {   for(int j=0;j<n2;j++){
+                        cout<<matriz[i][j]<<" ";   }cout<<endl;}
             getch;
             break;
         case 3:
             system ("cls");
-            cout<<"ARRAY CON DIMENSION 4x4.\n";
+            cout<<"ARRAY CON DIMENSION 4x4 con potencias.\n\n";
 
+            cout<<"Ingrese los valores para la matriz 4x4. "<<endl;
+            int mat[4][4];
+            for (int i=0; i<4; i++)
+            { for (int k=0; k<4; k++)
+            { cout<<"Posicion ("<<i<<","<<k<<"): "; cin>>mat[i][k]; } }
 
+            for(int i=0;i<4;i++)
+            {   for(int k=0;k<4;k++)
+				{if(k==1)
+				{ 	mat[i][k]=pow(mat[i][k],2); }
+				else{ if(k==2){
+						mat[i][k]=pow(mat[i][k],3); }
+				else{ if(k==3){
+						mat[i][k]=pow(mat[i][k],4);}}}
+				}
+			}   cout<<"\nLa matriz es: \n";
+
+                    for(int i=0;i<4;i++)
+                    {   for(int k=0;k<4;k++)
+                        {   cout<<mat[i][k]<<" ";   }cout<<endl;}
             getch ();
             break;
         default:
