@@ -27,11 +27,12 @@ int main ()
             cout<<"ARRAY DE NUMEROS DECIMALES.\n";
 
             float decimal[4];
-            cout<<"\nIngrese 4 numeros decimales.\n\n";
-                for(int i=0; i<4; i++) {
-                cout<<"Numero "<<i<<": ";cin>>decimal[i];   }
 
-                cout<<"\nLos numeros decimales son: \n";
+                decimal[0]=32.583;
+                decimal[1]=11.239;
+                decimal[2]=45.781;
+                decimal[3]=22.237;
+
                 for(int i=0; i<4; i++){
                 cout<<decimal[i]<<endl; }
             break;
